@@ -32,7 +32,7 @@
     <a class="nav-link active" href="/patients">Lista de Pacientes</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="#">Control de Calidad</a>
+    <a class="nav-link active" href="/control/create">Control de Calidad</a>
   </li>
 </ul>
 

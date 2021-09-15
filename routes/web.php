@@ -3,6 +3,7 @@
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\PatientsController;
 use App\Http\Controllers\PatientBuscarController;
+use App\Http\Controllers\ControlCalidad;
 use Illuminate\Support\Facades\Route;
 
 /*
