@@ -62,7 +62,7 @@ class PatientController extends Controller
     public function show($id)
     {
         $patient = Patient::find($id);
-        return view('patients.result')->with('patient',$patient);
+        return view('patients.show')->with('patient',$patient);
     }
 
     /**
@@ -93,10 +93,10 @@ class PatientController extends Controller
         $patient->apellido = $request->get('apellido');
         $patient->sexo = $request->get('sexo');
         $patient->eps = $request->get('eps');
-        $patients->colesterol = $request->get('colesterol');
-        $patients->hdl = $request->get('hdl');
-        $patients->ldl = $request->get('ldl');
-        $patients->trigliceridos = $request->get('trigliceridos');
+        $patient->colesterol = $request->get('colesterol');
+        $patient->hdl = $request->get('hdl');
+        $patient->ldl = $request->get('ldl');
+        $patient->trigliceridos = $request->get('trigliceridos');
 
         $patient->save();
 
@@ -115,4 +115,5 @@ class PatientController extends Controller
         $patient->delete();
         return redirect('/patients');
     }
+
 }

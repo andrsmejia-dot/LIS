@@ -34,9 +34,9 @@
                     <form action="{{route('patients.destroy' , $patient->id)}}" method="POST">
                         @csrf
                         @method('DELETE')
+                        <a href="/patients/{{$patient->id}}/show" class="btn btn-info">Resultados</a>
                         <a href="/patients/{{$patient->id}}/edit" class="btn btn-info">Editar</a>
-                        <button type="submit" class="btn btn-danger">Borrar</button>  
-                        <a href="/patients/{{$patient->id}}/result" class="btn btn-info">Resultados</a>
+                        <button type="submit" class="btn btn-danger">Borrar</button> 
                     </form>
                 </th>
             </tr>
