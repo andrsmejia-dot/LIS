@@ -20,7 +20,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', HomeController::class);
 Route::resource('patients', 'App\Http\Controllers\PatientController');
 Route::resource('patientBuscar', 'App\Http\Controllers\PatientBuscarController');
-
+Route::resource('control', 'App\Http\Controllers\ControlCalidad');
 /* Route::get('patients/create', [PatientsController::class , 'create']);
 Route::get('patients/{name}', [PatientsController::class , 'show']);
  */
