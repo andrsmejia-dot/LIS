@@ -7,7 +7,8 @@
 @section('content')
     <h1>Lista de pacientes en el LIS con Blade</h1>
     <a class="btn btn-primary" href="patients/create">CREAR PACIENTE</a>
-    <h1>LISTADO DE PACIENTE</h1>
+    <h1>LISTADO DE PACIENTES</h1>
+    @csrf
     <table class="table table-striped table-hover" id="patients">
         <thead>
             <tr>
@@ -34,7 +35,8 @@
                         @csrf
                         @method('DELETE')
                         <a href="/patients/{{$patient->id}}/edit" class="btn btn-info">Editar</a>
-                        <button type="submit" class="btn btn-danger">Borrar</button>    
+                        <button type="submit" class="btn btn-danger">Borrar</button>  
+                        <a href="/patients/{{$patient->id}}/result" class="btn btn-info">Resultados</a>
                     </form>
                 </th>
             </tr>

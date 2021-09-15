@@ -43,6 +43,10 @@ class PatientController extends Controller
         $patients->apellido = $request->get('apellido');
         $patients->sexo = $request->get('sexo');
         $patients->eps = $request->get('eps');
+        $patients->colesterol = $request->get('colesterol');
+        $patients->hdl = $request->get('hdl');
+        $patients->ldl = $request->get('ldl');
+        $patients->trigliceridos = $request->get('trigliceridos');
 
         $patients->save();
 
@@ -57,8 +61,8 @@ class PatientController extends Controller
      */
     public function show($id)
     {
-        $patients = Patient::all();
-        return view('patients.buscar')->with('patients',$patients);
+        $patient = Patient::find($id);
+        return view('patients.result')->with('patient',$patient);
     }
 
     /**
@@ -89,6 +93,10 @@ class PatientController extends Controller
         $patient->apellido = $request->get('apellido');
         $patient->sexo = $request->get('sexo');
         $patient->eps = $request->get('eps');
+        $patients->colesterol = $request->get('colesterol');
+        $patients->hdl = $request->get('hdl');
+        $patients->ldl = $request->get('ldl');
+        $patients->trigliceridos = $request->get('trigliceridos');
 
         $patient->save();
 

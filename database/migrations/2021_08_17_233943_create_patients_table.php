@@ -20,6 +20,10 @@ class CreatePatientsTable extends Migration
             $table->string('apellido',50);
             $table->string('sexo',10);
             $table->string('eps',20);
+            $table->string('colesterol',20);
+            $table->string('hdl',20);
+            $table->string('ldl',20);
+            $table->string('trigliceridos',20);
             $table->timestamps();
         });
     }

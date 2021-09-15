@@ -9,15 +9,33 @@
     <title>LIS</title>
 </head>
 <body>
-    <h1>Bienvenidos al LIS desde la vista del home.php</h1>
-    <h2>Sistema de Información del Laboratorio</h2>
-    <div class="btn-group">
-    <div class="btn-group">
-    <a href="/patients/create" class="btn btn-primary active" aria-current="page">Ingreso de Pacientes</a>
-    <a href="/patients/buscar" class="btn btn-primary active" aria-current="page">Consulta de Pacientes</a>
-    <a href="/patients" class="btn btn-primary active" aria-current="page">Lista de Pacientes</a>
-    <a href="#" class="btn btn-primary active" aria-current="page">Control de Calidad</a>
-    </div>
+
+<figure class="text-center">
+  <blockquote class="blockquote">
+    <h1>SISTEMA DE INFORMACIÓN DE LABORATORIO CLÍNICO - LIS</h1>
+  </blockquote>
+  <figcaption class="blockquote-footer">
+    <cite title="Source Title">Sistema de Información del Laboratorio</cite>
+  </figcaption>
+</figure>
+<hr>
+<b></b>
+
+<ul class="nav nav-pills nav-fill">
+  <li class="nav-item">
+    <a class="nav-link active"  href="/patients/create">Ingreso de Pacientes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="/patients/buscar">Consulta de Pacientes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="/patients">Lista de Pacientes</a>
+  </li>
+  <li class="nav-item">
+    <a class="nav-link active" href="#">Control de Calidad</a>
+  </li>
+</ul>
+
 </body>
 </html>
 
