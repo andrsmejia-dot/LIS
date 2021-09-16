@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+    <br><br>
     <h1>Registro control de calidad</h1>
     <div class="boton_volver">
     <!-- <a class="btn btn-primary" href="patients/create">CREAR PACIENTE</a> -->
@@ -64,7 +65,7 @@
     <table class="table table-striped table-hover control_calidad" id="coltotal">
         <thead>
         <tr>
-            <th colspan="2"rowspan="1" scope="col">HDL</th>
+            <th colspan="2"rowspan="1" scope="col">Colesterol (HDL)</th>
 
             
             <th colspan="4" scope="colgroup" >Nivel 1</th>
@@ -111,7 +112,7 @@
     <table class="table table-striped table-hover control_calidad" id="coltotal">
         <thead>
         <tr>
-            <th colspan="2"rowspan="1" scope="col">LDL</th>
+            <th colspan="2"rowspan="1" scope="col">Colesterol (LDL)</th>
 
             
             <th colspan="4" scope="colgroup" >Nivel 1</th>

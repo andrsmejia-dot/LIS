@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateNivel2Table extends Migration
+class CreateLevelTwosTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateNivel2Table extends Migration
      */
     public function up()
     {
-        Schema::create('_nivel2', function (Blueprint $table) {
+        Schema::create('level_twos', function (Blueprint $table) {
             $table->id();
             $table->string('hora',20)->nullable();
             $table->string('coltotal',20)->nullable();

@@ -39,7 +39,7 @@
 <br><br>
 <center><img src="https://static.wixstatic.com/media/c0af4e_b619f2b6f0a44be394c5937e2b0cd454~mv2.jpg/v1/fill/w_1024,h_441,al_c,q_85,usm_0.66_1.00_0.01/c0af4e_b619f2b6f0a44be394c5937e2b0cd454~mv2.webp" alt=""></center>
 <br><br>
-<p><b>Nuestro laboratorio clínico - BIOLIP ofrece servicios con altos estandares de calidad para pruebas de perfil lípidico como:</b></p><ul><li>COLESTEROL TOTAL</li><li>TRIGLICÉRIDOS</li><li>COLESTEROL DE ALTA DENSIDAD (DHL)</li><li>COLESTEROL DE BAJA DENSIDAD (LDL)</li>
+<p><b>Nuestro laboratorio clínico - BIOLIP ofrece servicios con altos estandares de calidad para pruebas de perfil lípidico como:</b></p><ul><li>COLESTEROL TOTAL</li><li>TRIGLICÉRIDOS</li><li>COLESTEROL DE ALTA DENSIDAD (HDL)</li><li>COLESTEROL DE BAJA DENSIDAD (LDL)</li>
 </body>
 </html>
 @endsection
