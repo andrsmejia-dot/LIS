@@ -6,13 +6,15 @@
 
 @section('content')
     <br><br>
-    <h1>Registro control de calidad</h1>
-    <div class="boton_volver">
+    <h1>Ingreso del control de calidad</h1>
+     <div class="boton_volver"> 
+    
     <!-- <a class="btn btn-primary" href="patients/create">CREAR PACIENTE</a> -->
 
     
 
-    <a href="/" class="btn btn-warning" >Volver</a>
+    
+    
 
     
     <table class="table table-striped table-hover control_calidad" id="coltotal">
@@ -241,4 +243,6 @@
     });
 } );
         </script>
+
+    <a href="/" class="btn btn-primary" >Atras</a>    
 @endsection

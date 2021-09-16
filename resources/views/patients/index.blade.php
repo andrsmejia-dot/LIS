@@ -5,9 +5,12 @@
 @endsection
 
 @section('content')
-    <h1>Lista de pacientes en el LIS con Blade</h1>
-    <a class="btn btn-primary" href="patients/create">CREAR PACIENTE</a>
+    <br><br>
     <h1>LISTADO DE PACIENTES</h1>
+    <br><br>
+    <a class="btn btn-primary" href="patients/create">CREAR PACIENTE</a>
+    <br><br>
+    
     @csrf
     <table class="table table-striped table-hover" id="patients">
         <thead>
