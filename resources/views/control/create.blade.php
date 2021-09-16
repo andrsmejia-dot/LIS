@@ -4,7 +4,7 @@
     <br><br>
     <h1>Ingreso de datos</h1>
     <br><br>
-    <form action="/control" method="POST"> 
+    <form action="/control" method="POST">
     @csrf
       <div class="row">
         <div class="col">
@@ -40,7 +40,7 @@
       </div>
       <div class="row">
         <div class="col">
-          <label for="">Triglicéridos</label>
+          <label for="">Trigliceridos</label>
           <input type="text" class="form-control" name="trigliceridos_1">
         </div>
         <div class="col">
@@ -48,12 +48,12 @@
           <input type="text" class="form-control" name="trigliceridos_2">
         </div>
       </div>
-        
-      <br><br>  
+
+      <br><br>
       <a href="/" class="btn btn-secondary">Cancelar</a>
       <button type="submit" class="btn btn-primary">Guardar</button>
-      <br><br> 
-      <br><br>  
-      <a href="/control" class="btn btn-info">Consulta de resultados</a>
+      <br><br>
+      <br><br>
+      <a href="/control" class="btn btn-primary">Consulta de resultados</a>
     </form>
 @endsection

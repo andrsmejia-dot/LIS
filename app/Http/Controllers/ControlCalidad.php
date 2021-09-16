@@ -7,6 +7,7 @@ use App\Models\LevelOne;
 use App\Models\LevelTwo;
 use DateTime;
 use DateTimeZone;
+use App\Models\Patient;
 
 class ControlCalidad extends Controller
 {
@@ -16,7 +17,7 @@ class ControlCalidad extends Controller
      * @return \Illuminate\Http\Response
      */
     public function index(){
-        $levelones = LevelOne::all(); 
+        $levelones = LevelOne::all();
         $leveltwos = LevelTwo::all();
 
         $valores_ldl_1=[];
@@ -59,7 +60,7 @@ class ControlCalidad extends Controller
 
             array_push($valores_ldl_1,(float)$levelones[$i]->LDL);
             array_push($valores_ldl_2,(float)$leveltwos[$i]->LDL);
-            
+
             array_push($valores_hdl_1,(float)$levelones[$i]->HDL);
             array_push($valores_hdl_2,(float)$leveltwos[$i]->HDL);
 
@@ -83,7 +84,7 @@ class ControlCalidad extends Controller
             array_push( $media_trigliceridos_2,array_sum(array_filter($valores_trigliceridos_2))/count(array_filter($valores_trigliceridos_2)));
             $var_ldl_1=0;
             $var_ldl_2=0;
-            
+
             $var_hdl_1=0;
             $var_hdl_2=0;
 
@@ -97,18 +98,18 @@ class ControlCalidad extends Controller
             for ($j = 0; $j < count($valores_ldl_1); $j++){
                 $var_ldl_1+=($valores_ldl_1[$j]-$media_ldl_1[$i])*($valores_ldl_1[$j]-$media_ldl_1[$i]);
                 $var_ldl_2+=($valores_ldl_2[$j]-$media_ldl_2[$i])*($valores_ldl_2[$j]-$media_ldl_2[$i]);
-                                                                                                        
+
                 $var_hdl_1+=($valores_hdl_1[$j]-$media_hdl_1[$i])*($valores_hdl_1[$j]-$media_hdl_1[$i]);
                 $var_hdl_2+=($valores_hdl_2[$j]-$media_hdl_2[$i])*($valores_hdl_2[$j]-$media_hdl_2[$i]);
-                                                                                                        
+
                 $var_coltotal_1+=($valores_coltotal_1[$j]-$media_coltotal_1[$i])*($valores_coltotal_1[$j]-$media_coltotal_1[$i]);
                 $var_coltotal_2+=($valores_coltotal_2[$j]-$media_coltotal_2[$i])*($valores_coltotal_2[$j]-$media_coltotal_2[$i]);
-                                                                                                        
+
                 $var_trigliceridos_1+=($valores_trigliceridos_1[$j]-$media_trigliceridos_1[$i])*($valores_trigliceridos_1[$j]-$media_trigliceridos_1[$i]);
                 $var_trigliceridos_2+=($valores_trigliceridos_2[$j]-$media_trigliceridos_2[$i])*($valores_trigliceridos_2[$j]-$media_trigliceridos_2[$i]);
-                
 
-                
+
+
             }
             array_push($desviacion_ldl_1,sqrt($var_ldl_1/count($valores_ldl_1)));
             array_push($desviacion_ldl_2,sqrt($var_ldl_2/count($valores_ldl_2)));
@@ -122,22 +123,22 @@ class ControlCalidad extends Controller
             array_push($desviacion_trigliceridos_1,sqrt($var_trigliceridos_1/count($valores_trigliceridos_1)));
             array_push($desviacion_trigliceridos_2,sqrt($var_trigliceridos_2/count($valores_trigliceridos_2)));
 
-            array_push($coeficiente_variacion_ldl_1,$desviacion_ldl_1[$i]/$media_ldl_1[$i]);            
+            array_push($coeficiente_variacion_ldl_1,$desviacion_ldl_1[$i]/$media_ldl_1[$i]);
             array_push($coeficiente_variacion_ldl_2,$desviacion_ldl_2[$i]/$media_ldl_2[$i]);
 
-            array_push($coeficiente_variacion_hdl_1,$desviacion_hdl_1[$i]/$media_hdl_1[$i]);            
+            array_push($coeficiente_variacion_hdl_1,$desviacion_hdl_1[$i]/$media_hdl_1[$i]);
             array_push($coeficiente_variacion_hdl_2,$desviacion_hdl_2[$i]/$media_hdl_2[$i]);
 
-            array_push($coeficiente_variacion_coltotal_1,$desviacion_coltotal_1[$i]/$media_coltotal_1[$i]);            
+            array_push($coeficiente_variacion_coltotal_1,$desviacion_coltotal_1[$i]/$media_coltotal_1[$i]);
             array_push($coeficiente_variacion_coltotal_2,$desviacion_coltotal_2[$i]/$media_coltotal_2[$i]);
 
-            array_push($coeficiente_variacion_trigliceridos_1,$desviacion_trigliceridos_1[$i]/$media_trigliceridos_1[$i]);            
+            array_push($coeficiente_variacion_trigliceridos_1,$desviacion_trigliceridos_1[$i]/$media_trigliceridos_1[$i]);
             array_push($coeficiente_variacion_trigliceridos_2,$desviacion_trigliceridos_2[$i]/$media_trigliceridos_2[$i]);
 
 
-                                                                                            
 
-            
+
+
         }
         $data=array('levelones'=>$levelones,
             'valores_ldl_1'=>$valores_ldl_1,'media_ldl_1'=>$media_ldl_1,'desviacion_ldl_1'=>$desviacion_ldl_1,'coeficiente_variacion_ldl_1'=>$coeficiente_variacion_ldl_1,
@@ -158,7 +159,7 @@ class ControlCalidad extends Controller
      * @return \Illuminate\Http\Response
      */
     public function create(){
-        
+
         return view('control.create');
     }
 
@@ -197,9 +198,10 @@ class ControlCalidad extends Controller
      * @param  int  $id
      * @return \Illuminate\Http\Response
      */
-    public function show($id){
-
-        
+    public function show($document)
+    {
+        $patient = Patient::find($document);
+        return view('control.show')->with('patients',$patient);
     }
 
     /**

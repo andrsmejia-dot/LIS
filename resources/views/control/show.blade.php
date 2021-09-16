@@ -6,7 +6,7 @@
         @csrf
     <div class="mb-3">
         <b><label for="" class="form-label">Documento</label></b>
-        <input type="text" class="form-control" id="id" name="id">
+        <input type="text" class="form-control" id="document" name="document">
       </div>
     <a class="btn btn-primary" href="patients/" role ="button">Buscar</a>
     <br>

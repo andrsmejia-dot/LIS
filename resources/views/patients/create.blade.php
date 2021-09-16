@@ -1,7 +1,6 @@
 @extends('layouts.layout')
 
 @section('content')
-    <br><br>
     <h1>Formulario para la creación de pacientes.</h1>
     <form action="/patients" method="POST">
         @csrf
@@ -38,24 +37,25 @@
                 </select>
           </div>
           <div class="mb-3">
-          <label for="" class="form-label">Colesterol total</label>
+          <label for="" class="form-label">Colesterol</label>
           <input type="text" class="form-control" id="colesterol" name="colesterol">
         </div>
         <div class="mb-3">
-          <label for="" class="form-label">Colesterol de alta densidad (HDL)</label>
+          <label for="" class="form-label">hdl</label>
           <input type="text" class="form-control" id="hdl" name="hdl">
         </div>
         <div class="mb-3">
-          <label for="" class="form-label">Colesterol de baja densidad (LDL)</label>
+          <label for="" class="form-label">ldl</label>
           <input type="text" class="form-control" id="ldl" name="ldl">
         </div>
         <div class="mb-3">
-          <label for="" class="form-label">Triglicéridos</label>
+          <label for="" class="form-label">trigliceridos</label>
           <input type="text" class="form-control" id="trigliceridos" name="trigliceridos">
         </div>
           <a href="/patients" class="btn btn-secondary">Cancelar</a>
         <button type="submit" class="btn btn-primary">Guardar</button>
       </form>
-      
+
 @endsection
+
 

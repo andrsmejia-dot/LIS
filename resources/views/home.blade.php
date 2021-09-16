@@ -1,4 +1,4 @@
-
+@extends('layouts.layout')
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -9,7 +9,7 @@
     <title>LIS</title>
 </head>
 <body>
-
+@section('content')
 <figure class="text-center">
   <blockquote class="blockquote">
     <br><br>
@@ -27,7 +27,7 @@
     <a class="nav-link active"  href="/patients/create">Ingreso de Pacientes</a>
   </li>
   <li class="nav-item">
-    <a class="nav-link active" href="/patients/buscar">Consulta de Pacientes</a>
+    <a class="nav-link active" href="/control/show">Consulta de Pacientes</a>
   </li>
   <li class="nav-item">
     <a class="nav-link active" href="/patients">Lista de Pacientes</a>
@@ -42,4 +42,5 @@
 <p><b>Nuestro laboratorio clínico - BIOLIP ofrece servicios con altos estandares de calidad para pruebas de perfil lípidico como:</b></p><ul><li>COLESTEROL TOTAL</li><li>TRIGLICÉRIDOS</li><li>COLESTEROL DE ALTA DENSIDAD (DHL)</li><li>COLESTEROL DE BAJA DENSIDAD (LDL)</li>
 </body>
 </html>
+@endsection
 
